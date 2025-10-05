@@ -1,0 +1,82 @@
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <h1>Congelisto</h1>
+    <p>Sistema de Gestión de Procesos (BPM)</p>
+  </header>
+
+  <main class="dashboard-main">
+    <div class="card" (click)="navigateTo('materia-prima-fresca')">
+      <div class="card-icon">
+        <img class="icon" src="assets/icons/fresh.png" alt="Materia Prima Fresca">
+      </div>
+      <p>Materia Prima Fresca</p>
+    </div>
+
+    <div class="card" (click)="navigateTo('materia-prima-congelada')">
+      <div class="card-icon">
+        <img class="icon" src="assets/icons/frozen-vegetable.png" alt="Materia Prima Congelada">
+      </div>
+      <p>Materia Prima Congelada</p>
+    </div>
+
+    <div class="card" (click)="navigateTo('producto-congelado')">
+      <div class="card-icon">
+        <img class="icon" src="assets/icons/frozen-food.png" alt="Producto Congelado">
+      </div>
+      <p>Producto Congelado</p>
+    </div>
+
+    <div class="card" (click)="navigateTo('control-temperaturas')">
+      <div class="card-icon">
+        <img class="icon" src="assets/icons/temperature.png" alt="Control de Temperaturas">
+      </div>
+      <p>Control de Temperaturas</p>
+    </div>
+
+    <div class="card" (click)="navigateTo('limpieza-y-poes')">
+      <div class="card-icon">
+        <img class="icon" src="assets/icons/cleaning.png" alt="Limpieza y POES">
+      </div>
+      <p>Limpieza y POES</p>
+    </div>
+
+    <div class="card" (click)="navigateTo('manejo-de-plagas')">
+      <div class="card-icon">
+        <img class="icon" src="assets/icons/bug.png" alt="Manejo de Plagas">
+      </div>
+      <p>Manejo de Plagas (MIP)</p>
+    </div>
+
+    <div class="card" (click)="navigateTo('historico')">
+      <div class="card-icon">
+        <img class="icon" src="assets/icons/history.png" alt="Historial">
+      </div>
+      <p>Historial</p>
+    </div>
+
+    <div class="card" (click)="navigateTo('kpis')">
+      <div class="card-icon">
+        <img class="icon" src="assets/icons/kpi.png" alt="KPIs">
+      </div>
+      <p>KPIs</p>
+    </div>
+
+    <div class="card" (click)="navigateTo('no-conformes')">
+      <div class="card-icon">
+        <img class="icon" src="assets/icons/sad.png" alt="No Conformes">
+      </div>
+      <p>No Conformes</p>
+    </div>
+  </main>
+
+  <section class="daily-records">
+    <h2>Registros del Día</h2>
+    <div class="records-content">
+      <p>Aún no hay registros para hoy.</p>
+    </div>
+    <button class="print-button">Imprimir Resumen</button>
+  </section>
+
+  <footer class="dashboard-footer">
+  </footer>
+</div>

@@ -1,0 +1,78 @@
+<a href="#" class="back-button">Volver al Menú</a>
+<form>
+  <div class="form-section">
+    <label>Número de Lote</label>
+    <input type="text" placeholder="Ej: L2527408-47" [(ngModel)]="batchNumber" name="batchNumber" />
+  </div>
+
+  <div class="form-section">
+    <label>Producto</label>
+    <select [(ngModel)]="product" name="product">
+      <option>Cebolla</option>
+      <option>Zanahoria</option>
+      <option>Morron Verde</option>
+      <option>Morron Rojo</option>
+      <option>Morron Amarillo</option>
+      <option>Puerro</option>
+      <option>Apio</option>
+      <option>Frutilla</option>
+    </select>
+  </div>
+
+  <div class="form-section">
+    <label>N°Introducción/RENSPA</label>
+    <input type="text" placeholder="Ingrese el número" [(ngModel)]="renspaNumber" name="renspaNumber" />
+  </div>
+
+  <div class="form-section">
+    <label>Proveedor</label>
+    <input type="text" placeholder="Ingrese el nombre del proveedor" [(ngModel)]="supplier" name="supplier" />
+  </div>
+
+  <div class="form-section">
+    <label>Pesos Brutos (kg)</label>
+    <div class="input-group">
+      <input type="number" placeholder="Ej: 120.5" [(ngModel)]="grossWeight" name="grossWeight" />
+      <button (click)="addGrossWeight()">+ Añadir otro peso</button>
+    </div>
+  </div>
+  <div class="form-section">
+    <label>Taras del Cajón (kg)</label>
+    <div class="input-group">
+      <input type="number" placeholder="Ej: 5.2" [(ngModel)]="boxTare" name="boxTare" />
+      <button (click)="addBoxTare()">+ Añadir otra tara</button>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <label>Temp. Materia Prima (°C)</label>
+    <input type="number" placeholder="Ej: 4" [(ngModel)]="rawMaterialTemp" name="rawMaterialTemp" />
+  </div>
+
+  <div class="form-section">
+    <label>Checklist de Calidad</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" [(ngModel)]="smellConform" name="smellConform" /> Olor Conforme</label>
+      <label><input type="checkbox" [(ngModel)]="colorConform" name="colorConform" /> Color Conforme</label>
+      <label><input type="checkbox" [(ngModel)]="sizeConform" name="sizeConform" /> Tamaño Conforme</label>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <label>Peso en Malas Condiciones (kg)</label>
+    <div class="input-group">
+      <input type="number" placeholder="Ej: 1.5" [(ngModel)]="badConditionWeight" name="badConditionWeight" />
+      <button (click)="addBadConditionWeight()">+ Añadir otro peso</button>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <label>Peso de Residuos (kg)</label>
+    <div class="input-group">
+      <input type="number" placeholder="Ej: 10.5" [(ngModel)]="wasteWeight" name="wasteWeight" />
+      <button (click)="addWasteWeight()">+ Añadir otro peso</button>
+    </div>
+  </div>
+
+  <button class="save-button" (click)="saveRecord()">Guardar Registro</button>
+</form>
